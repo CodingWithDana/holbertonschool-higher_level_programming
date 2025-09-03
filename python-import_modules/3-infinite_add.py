@@ -7,5 +7,5 @@ def main():
         total += int(arg)
     print(total)
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
