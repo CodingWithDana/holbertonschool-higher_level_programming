@@ -13,7 +13,6 @@ if __name__ == "__main__":
     else:
         print(f"{count} arguments:")
     
-    for i in range(len(argv)):
+    for i in range(count):
         # i+1 to start counting at 1
-        print(i + 1, argv[i])
-    
+        print(f"{i + 1}: {argv[i]}")
