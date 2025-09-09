@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     # Return 0 if input is not a string
-    if roman_string is None or type(roman_string) != str:
+    if roman_string is None or not isinstance(roman_string, str) != str:
         return 0
 
     # Mapping of Roman numerals to integers:
