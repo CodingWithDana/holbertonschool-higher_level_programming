@@ -19,7 +19,7 @@ def roman_to_int(roman_string):
     prev_value = 0
     
     # Loop through the Roman numeral from right to left
-    for char in reversed(roman_string)
+    for char in reversed(roman_string):
         if char not in roman_map:
             # Invalid character found
             return 0
