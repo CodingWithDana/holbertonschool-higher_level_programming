@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
         'L': 50,
         'C': 100,
         'D': 500,
-        'M': 1000 
+        'M': 1000
     }
     # Keep track of the final integer value of the Roman numeral
     total = 0
