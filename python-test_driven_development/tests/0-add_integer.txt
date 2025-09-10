@@ -1,0 +1,35 @@
+This file contains doctests for add_integer function.
+
+>>> from add_integer import add_integer
+
+# Normal cases
+>>> add_integer(1, 2)
+3
+
+# Using default value for b (98)
+>>> add_integer(2)
+100
+
+# Floats are casted before addition
+>>> add_integer(2.7, 3.2)
+5
+
+# Negative numbers
+>>> add_integer(-5, -7)
+-12
+
+# Mixed float and int
+>>> add_integer(100.9, 1)
+101
+
+# TypeError: a must be an integer
+>>> add_integer("hello", 3)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+# TypeError: b must be an integer
+>>> add_integer(3, None)
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
