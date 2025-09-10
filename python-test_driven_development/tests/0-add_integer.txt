@@ -1,8 +1,9 @@
 This file contains doctests for add_integer function.
 
 # Check that the module has a docstring
->>> import add_integer
->>> add_integer.__doc__ is not None and len(add_integer.__doc__.strip()) > 0
+>>> __import__("0-add_integer").__doc__ is not None and len(__import__("0-add_integer").__doc__.strip()) > 0
+True
+>>> __import__("0-add_integer").add_integer.__doc__ is not None and len(__import__("0-add_integer").add_integer.__doc__.strip()) > 0
 True
 
 # Check that the function has a docstring
