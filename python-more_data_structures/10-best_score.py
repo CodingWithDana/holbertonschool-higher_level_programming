@@ -9,8 +9,7 @@ def best_score(a_dictionary):
     best_value = None
 
     # Loop through each key-value pair in a_dictionary
-    for key in a_dictionary:
-        value = a_dictionary[key]
+    for key, value in a_dictionary.items():
         if best_value is None or value > best_value:
             best_value = value
             best_key = key
