@@ -1,32 +1,52 @@
-# Normal cases
->>> __import__("0-add_integer").add_integer(1, 2)
-3
+The ``add_integer`` module
+======================
 
-# Using default value for b (98)
->>> __import__("0-add_integer").add_integer(2)
-100
+Using ``add_integer``
+-------------------
 
-# Floats are casted before addition
->>> __import__("0-add_integer").add_integer(2.7, 3.2)
-5
 
-# Negative numbers
->>> __import__("0-add_integer").add_integer(-5, -7)
--12
+First import ``add_integer`` from the ``0-add_integer`` file:
 
-# Mixed float and int
->>> __import__("0-add_integer").add_integer(100.9, 1)
-101
+    >>> add = __import__('0-add_integer').add_integer
 
->>> __import__("0-add_integer").add_integer("hello", 3)
-Traceback (most recent call last):
+Tests:
+
+    >>> add(1, 2)
+    3
+
+    >>> add(3.4, 1.2)
+    4
+
+    Test - a is not int
+    >>> add("haha", 1)
+    Traceback (most recent call last):
     ...
-TypeError: a must be an integer
+    TypeError: a must be an integer
 
->>> __import__("0-add_integer").add_integer(3, None)
-Traceback (most recent call last):
+    Test - b is not int
+    >>> add(1, "haha")
+    Traceback (most recent call last):
     ...
-TypeError: b must be an integer
+    TypeError: b must be an integer
 
+    Test - result is infinity and there is float overflow
+    >>> add(1, float("inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
 
+    Test - cannot convert NaN to int
+    >>> add(1, float("nan"))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
 
+    Test - missing one argument
+    >>> add(1)
+    99
+
+    Test - missing both arguments
+    >>> add()    
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
