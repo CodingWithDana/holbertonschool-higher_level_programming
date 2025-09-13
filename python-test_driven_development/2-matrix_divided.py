@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """
-This module docstring provides a function to divide all 
+This module docstring provides a function to divide all
 elements of a matrix by a given divisor
 
-matrix_divided function validates the input, then divides each element by the given divisor
+matrix_divided function validates the input,
+then divides each element by the given divisor
 """
 
 
 def matrix_divided(matrix, div):
     """
-    Divide all elements of a matrix 
+    Divide all elements of a matrix
 
     Args:
         matrix: list of lists of integers/floats
@@ -17,7 +18,7 @@ def matrix_divided(matrix, div):
 
     Returns:
         A new matrix with elements divided by div, rounded to 2 decimal places.
-  
+
     Raises:
         TypeError: if matrix is not a list of lists of numbers,
             or if rows are not the same size,
