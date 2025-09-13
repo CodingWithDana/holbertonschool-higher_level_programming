@@ -27,19 +27,23 @@ def matrix_divided(matrix, div):
     """
     # Check matrix is a list
     if not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists) "
+                        "of integers/floats")
     # Check matrix is not empty
     if not matrix:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists) "
+                        "of integers/floats")
     # Check each row is a list
     for row in matrix:
         if not isinstance(row, list):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError("matrix must be a matrix (list of lists) "
+                            "of integers/floats")
     # Check each element is int or float
     for row in matrix:
         for element in row:
             if not isinstance(element, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists) "
+                                "of integers/floats")
     # Check row size consistency
     row_length = len(matrix[0])
     if not all(len(row) == row_length for row in matrix):
