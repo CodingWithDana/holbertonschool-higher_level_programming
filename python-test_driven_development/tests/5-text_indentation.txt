@@ -10,14 +10,14 @@ First import ``text_indentation`` from the ``5-text_indentation.py`` file:
 
 Tests:
 
-    >>> text_indentation("Hey, how are you? Great, you?")
-    Hey,
+    >>> text_indentation("Hey. How are you? Great: thanks.")
+    Hey.
     <BLANKLINE>
-    how are you?
+    How are you?
     <BLANKLINE>
-    Great
+    Great:
     <BLANKLINE>
-    you?
+    thanks.
 
     Test - text with no punctuation
     >>> text_indentation("This is a simple line")
