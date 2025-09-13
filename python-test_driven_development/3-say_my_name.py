@@ -18,7 +18,7 @@ def say_my_name(first_name, last_name=""):
 
     Returns:
         a string with the first name and last name
-  
+
     Raises:
         TypeError: if first_name or last_name is not a string
     """
