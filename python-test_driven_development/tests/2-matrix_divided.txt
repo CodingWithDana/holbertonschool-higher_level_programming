@@ -1,8 +1,8 @@
 The ``matrix_divided`` module
-======================
+==============================
 
 Using ``matrix_divided``
--------------------
+------------------------
 
 
 First import ``matrix_divided`` from the ``2-matrix_divided.py`` file:
@@ -33,7 +33,7 @@ Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Test - element not int/float
->>> matrix_divided([[1, "oops"], [3, 4]], div=2)
+>>> matrix_divided([[1, "yep"], [3, 4]], div=2)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
@@ -55,3 +55,7 @@ Test - div is zero
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
+
+Test - div is infinity
+>>> matrix_divided([[1, 2], [3, 4]], div=float("inf"))
+[[0.0, 0.0], [0.0, 0.0]]
