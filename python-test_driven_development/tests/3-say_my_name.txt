@@ -1,8 +1,8 @@
 The ``say_my_name`` module
-==============================
+===========================
 
 Using ``say_my_name``
-------------------------
+---------------------
 
 
 First import ``say_my_name`` from the ``3-say_my_name.py`` file:
