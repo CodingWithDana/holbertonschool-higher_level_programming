@@ -1,0 +1,40 @@
+The ``text_indentation`` module
+===============================
+
+Using ``text_indentation``
+---------------------------
+
+First import ``text_indentation`` from the ``5-text_indentation.py`` file:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Tests:
+
+    >>> text_indentation("Hey, how are you? Great, you?")
+    Hey,
+    <BLANKLINE>
+    how are you?
+    <BLANKLINE>
+    Great
+    <BLANKLINE>
+    you?
+
+    Test - text with no punctuation
+    >>> text_indentation("This is a simple line")
+    This is a simple line
+
+    Test - multiple spaces after punctuation
+    >>> text_indentation("First.   Second?    Third:   Fourth")
+    First.
+    <BLANKLINE>
+    Second?
+    <BLANKLINE>
+    Third:
+    <BLANKLINE>
+    Fourth
+
+    Test - input not string
+    >>> text_indentation(12345)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
