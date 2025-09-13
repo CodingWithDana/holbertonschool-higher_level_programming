@@ -1,5 +1,9 @@
+The ``print_square`` module
+============================
+
 Using ``print_square``
-------------------------
+-----------------------
+
 
 First import ``print_square`` from the ``4-print_square.py`` file:
 
