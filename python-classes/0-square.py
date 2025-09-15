@@ -8,8 +8,8 @@ class Square:
 
     Args:
         None (because the class Square is empty)
-  
+
     Returns:
         Nothing
-  
+
     """
