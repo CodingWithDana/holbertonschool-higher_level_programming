@@ -11,7 +11,6 @@ class Square:
         __position(tuple): position of the square (private)
     """
 
-
     def __init__(self, size=0, position=(0, 0)):
         """
         Initialise the square
@@ -99,7 +98,7 @@ class Square:
         """
         if self.__size == 0:
             print()
-            #Exit the method my_print() early if size == 0 to print
+            # Exit the method my_print() early if size == 0 to print
             # only a single empty line
             return
             # so never print the vertical offset if size == 0
