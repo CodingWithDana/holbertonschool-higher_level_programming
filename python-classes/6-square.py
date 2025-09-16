@@ -103,12 +103,12 @@ class Square:
             return
             # so never print the vertical offset if size == 0
 
-        # print vertical 
+        # print vertical
         for _ in range(self.__position[1]):
             print()
 
         for _ in range(self.__size):
-            # print horizontal 
+            # print horizontal
             print(" " * self.__position[0], end="")
             # print square row
             print("#" * self.__size)
