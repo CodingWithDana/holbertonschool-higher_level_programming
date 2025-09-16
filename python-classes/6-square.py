@@ -102,6 +102,10 @@ class Square:
         # print vertical 
         for _ in range(self.__position[1]):
             print()
+            #Exit the method my_print() early if size == 0 to print
+            # only a single empty line
+            return
+            # so never print the vertical offset if size == 0
             
         for _ in range(self.__size):
             # print horizontal 
