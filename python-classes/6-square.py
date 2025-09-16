@@ -64,7 +64,7 @@ class Square:
         Get the position of the square
         """
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """ Set the position of the square with explicit validation """
@@ -76,7 +76,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        
+
         self.__position = value
 
     # Add public instance method area()
@@ -98,15 +98,15 @@ class Square:
         """
         if self.__size == 0:
             print()
-        
-        # print vertical 
-        for _ in range(self.__position[1]):
-            print()
             #Exit the method my_print() early if size == 0 to print
             # only a single empty line
             return
             # so never print the vertical offset if size == 0
-            
+
+        # print vertical 
+        for _ in range(self.__position[1]):
+            print()
+
         for _ in range(self.__size):
             # print horizontal 
             print(" " * self.__position[0], end="")
