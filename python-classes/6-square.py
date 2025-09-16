@@ -11,6 +11,7 @@ class Square:
         __position(tuple): position of the square (private)
     """
 
+
     def __init__(self, size=0, position=(0, 0)):
         """
         Initialise the square
