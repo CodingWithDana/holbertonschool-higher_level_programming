@@ -31,12 +31,12 @@ class Square:
         # Assigning the value to the private instance attribute 'size'
         self.__size = size
 
-        # Add public instance method area()
-        def area(self):
-            """
-            Return the current square area
-    
-            Returns:
-                int: area of the square
-            """
-            return self.__size * self.__size
+    # Add public instance method area()
+    def area(self):
+        """
+        Return the current square area
+
+        Returns:
+            int: area of the square
+        """
+        return self.__size * self.__size
