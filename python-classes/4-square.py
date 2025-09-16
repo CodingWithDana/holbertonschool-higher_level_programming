@@ -21,12 +21,12 @@ class Square:
         """
         # Use the property setter for validation
         self.size = size
-  
+
     @property
     def size(self):
         """
         Get the size of the square
-        
+
         Returns:
             int: size of the square
         """
@@ -39,7 +39,7 @@ class Square:
 
         Args:
             value (int): new size of the square
-        
+
         Raises:
             TypeError: if value is not an integer
             ValueError: if value is less than 0
