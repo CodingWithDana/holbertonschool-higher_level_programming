@@ -59,12 +59,12 @@ class Square:
             int: area of the square
         """
         return self.__size * self.__size
-    
+
     # Add public instance method my_print()
     def my_print(self):
         """
         Print the square using #
-        
+
         If size is 0, print an empty line
         """
         if self.__size == 0:
