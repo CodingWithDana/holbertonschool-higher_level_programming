@@ -21,7 +21,7 @@ class Square:
         """
         # Use the property setter for validation
         self.size = size
-        
+  
     @property
     def size(self):
         """
@@ -31,12 +31,12 @@ class Square:
             int: size of the square
         """
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """
         Set the size of the square with validation
-        
+
         Args:
             value (int): new size of the square
         
