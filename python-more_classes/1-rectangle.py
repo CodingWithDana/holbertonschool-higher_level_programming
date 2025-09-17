@@ -13,7 +13,9 @@ class Rectangle:
             width (int): the width of the rectangle (default 0)
             height (int): the height of the rectangle (default 0)
         """
+        # triggers width setter
         self.__width = width
+        # triggers height setter
         self.__height = height
 
     @property
@@ -36,6 +38,8 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
+        # triggers the setter to assign new value to width attribute
+        self.__width = value
 
     @property
     def height(self):
@@ -59,4 +63,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
