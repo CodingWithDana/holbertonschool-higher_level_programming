@@ -68,6 +68,7 @@ class Rectangle:
     def area(self):
         """ Return the rectangle area"""
         return self.__width * self.__height
+
     # Add public instance method to calc rectangle perimeter
     def perimeter(self):
         """ Return the rectangle perimeter"""
