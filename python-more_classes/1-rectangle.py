@@ -56,7 +56,7 @@ class Rectangle:
 
         Raises:
             TypeError: if value is not an integer
-            ValueError: if value is less than 0           
+            ValueError: if value is less than 0
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
