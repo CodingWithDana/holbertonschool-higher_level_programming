@@ -71,4 +71,6 @@ class Rectangle:
     # Add public instance method to calc rectangle perimeter
     def perimeter(self):
         """ Return the rectangle perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return (self.__width + self.__height) * 2
