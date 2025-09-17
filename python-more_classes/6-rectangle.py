@@ -95,9 +95,8 @@ class Rectangle:
         """ Return a string that can recreate the rectangle with eval() """
         return "Rectangle({}, {})".format(self.width, self.height)
         # or you can use f-string way:
-            # return f"Rectangle({self.width}, {self.height})"
+        # return f"Rectangle({self.width}, {self.height})"
 
-    # destroy the instance of Rectangle
-    def __del__(self):
+    # destroy the instance of Rectangle and decrement the number_of_instances
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
