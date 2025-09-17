@@ -98,6 +98,7 @@ class Rectangle:
         # return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """ Destroy the instance of Rectangle and decrement the number_of_instances """
+        """ Destroy the instance of Rectangle and
+        decrement the number_of_instances """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
