@@ -108,7 +108,7 @@ class Rectangle:
     # and returning the bigger one
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """ 
+        """
         Return the biggest Rectangle instance based on the area
         If both Rectangle instances have the same area, return rect_1
 
