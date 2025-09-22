@@ -27,7 +27,7 @@ Test - check __str__ (empty list prints [])
 Test - check append()
 >>> my_list.append(3)
 >>> my_list.append(2)
->>> my_list.append
+>>> my_list
 [3, 2]
 
 Test - check print_sorted() with sorted append
