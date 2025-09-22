@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" 
+"""
     Defines the lookup function that returns all attributes
-    and methods of an object 
+    and methods of an object
 """
 
 
