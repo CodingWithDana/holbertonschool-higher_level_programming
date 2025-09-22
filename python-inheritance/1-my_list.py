@@ -4,7 +4,7 @@
 """
 
 
-class MyList:
+class MyList(list):
     """ MyList class inherits from list """
 
     def print_sorted(self):
