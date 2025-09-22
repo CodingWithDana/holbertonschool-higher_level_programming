@@ -7,14 +7,14 @@ Using ``BaseGeometry``
 
 First import ``BaseGeometry`` from the ``7-base_geometry.py`` file:
 
-    >>> BaseGeometry = __import__('base_geometry').BaseGeometry
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Tests:
 
 Test - check instantiation
 >>> bg = BaseGeometry()
 >>> type(bg)
-<class 'base_geometry.BaseGeometry'>
+<class '7-base_geometry.BaseGeometry'>
 
 Test - area() is present
 >>> bg.area()
