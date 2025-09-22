@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Defines a class BaseGeometry """
+""" Defines BaseGeometry and Rectangle """
 
 
 class BaseGeometry:
@@ -36,6 +36,5 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-# Test
 if __name__ == "__main__":
     print(issubclass(Rectangle, BaseGeometry))
