@@ -1,0 +1,73 @@
+The ``print_sorted`` module
+==============================
+
+Using ``print_sorted``
+------------------------
+
+
+First import ``print_sorted`` from the ``1-my_list.py`` file:
+
+    >>> print_sorted = __import__('1-my_list').print_sorted
+
+Tests:
+
+Test - check instantiation
+>>> from 1_my-list import MyList
+>>> my_list = MyList()
+>>> type(my_list)
+<class '1-my_list.MyList'>
+
+Test - check Inheritance from MyList
+>>> isinstance(my_list, list)
+True
+
+Test - check __str__ (empty list prints [])
+>>> print(my_list)
+[]
+
+Test - check append()
+>>> my_list.append(3)
+>>> my_list.append(2)
+>>> my_list.append()
+[3, 2]
+
+Test - check print_sorted() with sorted append
+>>> my_list2 = MyList([1, 2, 3])
+>>> my_list2.print_sorted()
+[1, 2, 3]
+>>> print(my_list2) # original unchanged
+[1, 2, 3]
+
+Test - check print_sorted() with not sorted append
+>>> my_list3 = MyList()
+>>> my_list3.append(1)
+>>> my_list3.append(4)
+>>> my_list3.append(2)
+>>> my_list3.append(3)
+>>> my_list3.append(5)
+>>> my_list3.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list3)
+[1, 4, 2, 3, 5]
+
+Test - check print_sorted() with negative number
+>>> my_list4 = MyList([3, -1, 0])
+>>> my_list4.print_sorted()
+[-1, 0, 3]
+>>> print(my_list4)
+[3, -1, 0]
+
+Test - check print_sorted() with empty list
+>>> my_list5 = MyList()
+>>> my_list5.print_sorted()
+[]
+>>> print(my_list5)
+[]
+
+Test - check print_sorted() returns a new list (the original unchanged)
+>>> my_list6 = MyList([5, 1])
+>>> sorted_copy = sorted(my_list6)
+>>> sorted_copy
+[1, 5]
+>>> print(my_list6)
+[5, 1]
