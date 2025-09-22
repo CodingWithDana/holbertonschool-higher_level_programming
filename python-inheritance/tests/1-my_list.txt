@@ -1,23 +1,22 @@
-The ``print_sorted`` module
-==============================
+The ``MyList`` module
+======================
 
-Using ``print_sorted``
-------------------------
+Using ``MyList``
+-----------------
 
 
-First import ``print_sorted`` from the ``1-my_list.py`` file:
+First import ``MyList`` from the ``1-my_list.py`` file:
 
-    >>> print_sorted = __import__('1-my_list').print_sorted
+    >>> MyList = __import__('1-my_list').MyList
 
 Tests:
 
 Test - check instantiation
->>> from 1_my-list import MyList
 >>> my_list = MyList()
 >>> type(my_list)
 <class '1-my_list.MyList'>
 
-Test - check Inheritance from MyList
+Test - check Inheritance from list
 >>> isinstance(my_list, list)
 True
 
@@ -28,7 +27,7 @@ Test - check __str__ (empty list prints [])
 Test - check append()
 >>> my_list.append(3)
 >>> my_list.append(2)
->>> my_list.append()
+>>> my_list.append
 [3, 2]
 
 Test - check print_sorted() with sorted append
