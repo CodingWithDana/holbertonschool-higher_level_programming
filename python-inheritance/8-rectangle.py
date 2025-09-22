@@ -35,3 +35,7 @@ class Rectangle(BaseGeometry):
         # Private attributes
         self.__width = width
         self.__height = height
+
+# Test
+if __name__ == "__main__":
+    print(issubclass(Rectangle, BaseGeometry))
