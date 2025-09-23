@@ -3,19 +3,22 @@ class VerboseList(list):
         # call the append of the real list
         super().append(item)
         print(f"Added {item} to the list.")
-        
+ 
     def extend(self, item):
         super().extend(item)
         print(f"Extended the list with len({item}) items.")
-        
+   
     def remove(self, item):
         print(f"Removed {item} from the list.")
         super().remove(item)
-        
+   
     def pop(self, index=-1):
+        # remove the item first
+        item = super().pop(index)
+        # print the removed item above
         print(f"Popped {index} from the list.")
-        super().pop(index)
-        
+        return item
+
 # Instantiate
 vl = VerboseList([1, 2, 3])
 
