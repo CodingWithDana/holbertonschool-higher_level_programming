@@ -8,7 +8,7 @@ class CountedIterator:
     def get_count(self):
         return self.__count
 
-    # overwite the __next__ meth    od
+    # overwite the __next__ method
     def __next__(self):
         # try to fetch the try to next item from the orginal itertor
         try:
