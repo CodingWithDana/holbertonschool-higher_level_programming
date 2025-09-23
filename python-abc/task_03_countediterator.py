@@ -1,6 +1,4 @@
 class CountedIterator:
-
-
     def __init__(self, iterable):
         # create the iterator object
         self.iterator = iter(iterable)
