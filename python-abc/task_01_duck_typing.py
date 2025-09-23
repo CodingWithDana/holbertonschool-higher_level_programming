@@ -34,8 +34,8 @@ class Rectangle(Shape):
 # duck-typed function
 def shape_info(shape):
     # assume shape has area() and perimeter()
-    print("Area: ", shape.area())
-    print("Perimeter: ", shape.perimeter())
+    print(f"Area: {shape.area():.1f}")
+    print(f"Perimeter: {shape.perimeter():.1f}")
 
 # Instantiate a Circle and Rectangle
 c = Circle(5)
