@@ -4,7 +4,7 @@ class SwimMixin:
 
 class FlyMixin:
     def fly(self):
-        print("Teh creature flies!")
+        print("The creature flies!")
 
 class Dragon(SwimMixin, FlyMixin):
     def roar(self):
