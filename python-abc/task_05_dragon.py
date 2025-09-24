@@ -12,6 +12,6 @@ class Dragon(SwimMixin, FlyMixin):
 
 # instantiate
 draco = Dragon()
-dragon.swim()
-dragon.fly()
-dragon.roar()
+draco.swim()
+draco.fly()
+draco.roar()
