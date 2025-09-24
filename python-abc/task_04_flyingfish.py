@@ -27,8 +27,8 @@ class FlyingFish(Fish, Bird):
 # instantiate
 flying_fish = FlyingFish()
 # call methods: fly, swim, habitat
-fly(flying_fish)
 swim(flying_fish)
+fly(flying_fish)
 habitat(flying_fish)
 
 # use mro() method
