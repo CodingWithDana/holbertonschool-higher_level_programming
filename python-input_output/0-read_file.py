@@ -6,8 +6,8 @@ def read_file(filename=""):
     """
     Read a text file (UTF8) and print to the stdout
 
-    Args: 
-        filename (str): the path to the file to be read (defaults to empty string)
+    Args:
+        filename (str):the path to the file to read(defaults to empty string)
 
     Return:
         none
