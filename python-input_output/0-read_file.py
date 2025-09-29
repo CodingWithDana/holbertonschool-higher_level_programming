@@ -1,12 +1,17 @@
 #!/usr/bin/python3
-# 1st way: Open the file in the text mode with UTF8 encoding
+""" Module for reading and printing the content of a UTF-8 text file """
+
+
 def read_file(filename=""):
+    """
+    Read a text file (UTF8) and print to the stdout
+
+    Args: 
+        filename (str): the path to the file to be read (defaults to empty string)
+
+    Return:
+        none
+    """
     with open(filename, 'r', encoding='utf-8') as file:
         for line in file:
             print(line, end="")
-
-# # 2nd way: whole file content shown at once
-# def read_file(filename=""):
-#     with open(filename, "r", encoding="utf-8") as file:
-#         contents = file.read()
-#     print(contents)
