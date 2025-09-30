@@ -11,7 +11,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 
-# Load existing lists from the json file, 
+# Load existing lists from the json file,
 # otherwise create an empty list if the file doesn't exist
 try:
     lists = load_from_json_file(filename)
