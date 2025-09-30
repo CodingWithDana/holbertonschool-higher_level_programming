@@ -13,11 +13,11 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """ 
+        """
             Retrieve a dictionary representation of the Student instance
 
             If the "attrs" is a list of strings, only attributes with names
-            contained in this list are returned. 
+            contained in this list are returned.
 
             Otherwise, return all attributes.
 
@@ -29,7 +29,8 @@ class Student:
         """
         if isinstance(attrs, list) and all(isinstance(a, str) for a in attrs):
             # Include only selected attributes that exist in the object (list)
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+            return {key: getattr(self, key) for key in attrs
+                    if hasattr(self, key)}
 
         # Otherwise return all attributes
         return self.__dict__.copy()
