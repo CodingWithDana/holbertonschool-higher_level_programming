@@ -12,7 +12,7 @@ def write_file(filename="", text=""):
     Return:
         none
     """
-    with open(filename, 'w', encoding='utf-8') as file:
+    with open(filename, 'w', encoding='utf-8') as f:
         characters_written = f.write(text)
 
     print(characters_written)
