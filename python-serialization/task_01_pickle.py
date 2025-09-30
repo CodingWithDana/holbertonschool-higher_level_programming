@@ -41,24 +41,24 @@ class CustomObject:
         except Exception:
             return None
 
-        @classmethod
-        def deserialize(cls, filename):
-            """
-                Deserialize an object from a file and 
-                return an instance of the CustomObject from the provided name
+    @classmethod
+    def deserialize(cls, filename):
+        """
+            Deserialize an object from a file and 
+            return an instance of the CustomObject from the provided name
 
-                Args:
-                    filename (str): the file containing the serialised object
+            Args:
+                filename (str): the file containing the serialised object
 
-                Return:
-                    CustomObject: the deserialised object
-                    otherwise None if an error occurred
-            """
-            try:
-                with open(filename, 'rb') as f:
-                    return pickle.load(f)
-            except Exception:
-                return None
+            Return:
+                CustomObject: the deserialised object
+                otherwise None if an error occurred
+        """
+        try:
+            with open(filename, 'rb') as f:
+                return pickle.load(f)
+        except Exception:
+            return None
 
     def display(self):
         """
