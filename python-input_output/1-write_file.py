@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Module for writing a string to a text file and returning the length of characters written """
+""" 
+    Module for writing a string to a text file and 
+    returning the length of characters written 
+"""
 
 
 def write_file(filename="", text=""):
