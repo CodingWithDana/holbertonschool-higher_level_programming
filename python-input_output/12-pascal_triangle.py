@@ -9,11 +9,11 @@ def pascal_triangle(n):
     """
         Return a list of lists representing Pascal's Triangle of n
 
-        Args: 
+        Args:
             n (int): number of rows
 
         Return:
-            list: list of lists of integers 
+            list: list of lists of integers
     """
 
     # Check: empty list
@@ -23,7 +23,7 @@ def pascal_triangle(n):
     # First row
     triangle = [[1]]
 
-    for i in range (1, n):
+    for i in range(1, n):
         prev_row = triangle[-1]
         # Each row starts and ends with 1
         row = [1]
