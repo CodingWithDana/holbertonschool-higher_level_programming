@@ -1,4 +1,12 @@
+#!/usr/bin/python3
+"""
+    Module for serialising and deserialising custom Python objects
+    using pickle module
+"""
+
+
 import pickle
+
 
 class CustomObject:
     def __init__(self, name: str, age: int, is_student: bool):
