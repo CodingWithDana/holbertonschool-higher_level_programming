@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Module for returning an object 
+    Module for returning an object
     (Python data structure) represented by a JSON string
 """
 import json
