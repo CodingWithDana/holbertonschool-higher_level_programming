@@ -31,5 +31,5 @@ class Student:
             # Include only selected attributes that exist in the object (list)
             return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
 
-            # Otherwise return all attributes
-            return self.__dict__.copy()
+        # Otherwise return all attributes
+        return self.__dict__.copy()
