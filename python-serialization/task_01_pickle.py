@@ -10,17 +10,17 @@ import pickle
 
 class CustomObject:
     def __init__(self, name: str, age: int, is_student: bool):
+        """
+            Initialise a CustomObject instance
+
+            Args:
+                name (str): name of the student
+                age (int): age of the student
+                is_student (bool): student status
+        """
         self.name = name
         self.age = age
         self.is_student = is_student
-
-    def display(self):
-        """
-            Print the object's attributes in a formatted way
-        """
-        print(f"Name: {self.name}")
-        print(f"Age: {self.age}")
-        print(f"Is Student: {self.is_student}")
 
     def serialize(self, filename):
         """
@@ -59,3 +59,11 @@ class CustomObject:
                     return None
             except Exception:
                 return None
+
+    def display(self):
+        """
+            Print the object's attributes in a formatted way
+        """
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Is Student: {self.is_student}")   
