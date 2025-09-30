@@ -1,7 +1,7 @@
 import pickle
 
 class CustomObject:
-    def __init__(self, name: str, age: int, is_student: bool):
+    def __init__(self, name, age, is_student):
         self.name = name
         self.age = age
         self.is_student = is_student
@@ -25,10 +25,8 @@ class CustomObject:
         try:
             with open(filename, "wb") as f:
                 pickle.dump(self, f)
-        except (OSError, pickle.PickleError):
+        except Exception:
             return None
-        #Explicit
-        return None
 
         @classmethod
         def deserialize(cls, filename):
@@ -49,5 +47,5 @@ class CustomObject:
                 if isinstance(obj, cls):
                     return obj
                 return None
-            except (OSError, pickle.PickleError, EOFError):
+            except Exception:
                 return None
