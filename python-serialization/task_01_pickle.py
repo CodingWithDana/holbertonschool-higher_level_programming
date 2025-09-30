@@ -27,6 +27,8 @@ class CustomObject:
                 pickle.dump(self, f)
         except (OSError, pickle.PickleError):
             return None
+        #Explicit
+        return None
 
         @classmethod
         def deserialize(cls, filename: str):
@@ -47,5 +49,5 @@ class CustomObject:
                 if isinstance(obj, cls):
                     return obj
                 return None
-            except (OSError, pickle.PickleError, EOFError):
+            except Exception:
                 return None
