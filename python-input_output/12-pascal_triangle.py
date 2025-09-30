@@ -24,7 +24,7 @@ def pascal_triangle(n):
     triangle = [[1]]
 
     for i in range(1, n):
-        prev_row = triangle[-1]
+        prev_row = triangle[i - 1]
         # Each row starts and ends with 1
         row = [1]
         # Compute middle values
