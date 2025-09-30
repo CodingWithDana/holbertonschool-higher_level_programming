@@ -14,7 +14,7 @@ class CustomObject:
         print(f"Age: {self.age}")
         print(f"Is Student: {self.is_student}")
 
-    def serialize(self, filename: str):
+    def serialize(self, filename):
         """
             Serialise the current instance of the object and
             save it to the provided filename
@@ -25,13 +25,13 @@ class CustomObject:
         try:
             with open(filename, "wb") as f:
                 pickle.dump(self, f)
-        except Exception:
+        except (OSError, pickle.PickleError):
             return None
         #Explicit
         return None
 
         @classmethod
-        def deserialize(cls, filename: str):
+        def deserialize(cls, filename):
             """
                 Deserialise an object from a file and 
                 return an instance of the CustomObject from the provided name
@@ -49,5 +49,5 @@ class CustomObject:
                 if isinstance(obj, cls):
                     return obj
                 return None
-            except Exception:
+            except (OSError, pickle.PickleError, EOFError):
                 return None
