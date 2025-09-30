@@ -26,7 +26,7 @@ class CustomObject:
 
     def serialize(self, filename):
         """
-            Serialise the current instance of the object and
+            Serialize the current instance of the object and
             save it to the provided filename
 
             Args:
@@ -44,7 +44,7 @@ class CustomObject:
         @classmethod
         def deserialize(cls, filename):
             """
-                Deserialise an object from a file and 
+                Deserialize an object from a file and 
                 return an instance of the CustomObject from the provided name
 
                 Args:
@@ -66,4 +66,4 @@ class CustomObject:
         """
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
-        print(f"Is Student: {self.is_student}")   
+        print(f"Is Student: {self.is_student}")
