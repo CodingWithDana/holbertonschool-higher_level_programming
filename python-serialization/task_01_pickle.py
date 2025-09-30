@@ -1,7 +1,7 @@
 import pickle
 
 class CustomObject:
-    def __init__(self, name, age, is_student):
+    def __init__(self, name: str, age: int, is_student: bool):
         self.name = name
         self.age = age
         self.is_student = is_student
@@ -46,6 +46,7 @@ class CustomObject:
                     obj = pickle.load(f)
                 if isinstance(obj, cls):
                     return obj
-                return None
+                else:
+                    return None
             except Exception:
                 return None
