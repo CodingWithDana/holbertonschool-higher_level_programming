@@ -8,13 +8,13 @@ class CustomObject:
 
     def display(self):
         """
-            Printthe object's attributes in a formatted way
+            Print the object's attributes in a formatted way
         """
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
-        print(f" Is Student: {self.is_student}")
+        print(f"Is Student: {self.is_student}")
 
-    def serialize(self, filename):
+    def serialize(self, filename: str):
         """
             Serialise the current instance of the object and
             save it to the provided filename
@@ -29,7 +29,7 @@ class CustomObject:
             return None
 
         @classmethod
-        def deserialize(cls, filename):
+        def deserialize(cls, filename: str):
             """
                 Deserialise an object from a file and 
                 return an instance of the CustomObject from the provided name
