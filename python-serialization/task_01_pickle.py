@@ -9,6 +9,8 @@ import pickle
 
 
 class CustomObject:
+    """ A custom object class representing a student's details """
+    
     def __init__(self, name: str, age: int, is_student: bool):
         """
             Initialise a CustomObject instance
@@ -29,9 +31,11 @@ class CustomObject:
 
             Args:
                 filename (str): the file to save the serialised object
+                
+            Return: None
         """
         try:
-            with open(filename, "wb") as f:
+            with open(filename, 'wb') as f:
                 pickle.dump(self, f)
             return True
         except Exception:
@@ -51,12 +55,8 @@ class CustomObject:
                     otherwise None if an error occurred
             """
             try:
-                with open(filename, "rb") as f:
-                    obj = pickle.load(f)
-                if isinstance(obj, cls):
-                    return obj
-                else:
-                    return None
+                with open(filename, 'rb') as f:
+                    return pickle.load(f)
             except Exception:
                 return None
 
