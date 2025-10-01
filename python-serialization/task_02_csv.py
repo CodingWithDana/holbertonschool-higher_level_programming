@@ -33,7 +33,7 @@ def convert_csv_to_json(csv_filename):
 
     return True
 
-#TEST MY CODE:
-csv_file = "data.csv"
-convert_csv_to_json(csv_file)
-print(f"Data from {csv_file} has been converted to data.json")
+# #TEST MY CODE:
+# csv_file = "data.csv"
+# convert_csv_to_json(csv_file)
+# print(f"Data from {csv_file} has been converted to data.json")
