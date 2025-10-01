@@ -23,12 +23,17 @@ def convert_csv_to_json(csv_filename):
         # read CSV file
         with open(csv_filename, mode ='r', newline='',
                   encoding='utf-8') as csvfile:
-            data = list(csv.DictReader(csvfile))
+            formatted_data = list(csv.DictReader(csvfile))
 
         # write JSON data to file
         with open('data.json', 'w', encoding='utf-8') as jsonfile:
-            json.dump(data, jsonfile, indent=4)
+            json.dump(formatted_data, jsonfile)
     except FileNotFoundError:
         return False
 
     return True
+
+#TEST MY CODE:
+csv_file = "data.csv"
+convert_csv_to_json(csv_file)
+print(f"Data from {csv_file} has been converted to data.json")
