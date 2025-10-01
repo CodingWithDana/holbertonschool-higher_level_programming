@@ -30,7 +30,7 @@ def serialize_to_xml(dictionary, filename):
     tree.write(filename, encoding='utf-8', xml_declaration=True)
 
 
-def deserialise_from_xml(filename):
+def deserialize_from_xml(filename):
     """
     Deserialise XML content from a file into a Python dictionary
 
