@@ -32,5 +32,5 @@ def convert_csv_to_json(csv_filename: str) -> bool:
 
         return True
 
-    except Exception:
+    except (FileNotFoundError, OSError, csv.Error, json.JSONDecodeError):
         return False
