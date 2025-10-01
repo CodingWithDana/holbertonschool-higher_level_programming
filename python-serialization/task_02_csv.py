@@ -21,16 +21,15 @@ def convert_csv_to_json(csv_filename: str) -> bool:
     """
     try:
         # read CSV file
-        with open(csv_filename, mode ='r', newline='', encoding='utf-8') as csvfile:
-            reader = csv.DictReader(csvfile)
-            # convert rows to list of dicts
-            data = [row for row in reader]
+        with open(csv_filename, mode ='r', newline='',
+                  encoding='utf-8') as csvfile:
+            data = list(csv.DictReader(csvfile))
 
         # write JSON data to file
         with open('data.json', 'w', encoding='utf-8') as jsonfile:
             json.dump(data, jsonfile, indent=4)
 
-        return True
-
     except (FileNotFoundError, OSError, csv.Error, json.JSONDecodeError):
         return False
+
+    return True
