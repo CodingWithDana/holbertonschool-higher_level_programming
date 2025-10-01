@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+"""
+    Module for converting a CSV file to JSON
+    and save as data.json
+"""
+
+
 import csv
 import json
 
