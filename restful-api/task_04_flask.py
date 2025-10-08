@@ -18,7 +18,7 @@ def status():
     return "OK"
 
 @app.route("/data")
-def get_users():
+def get_all_users():
     # return a list of all usernames
     return jsonify(list(users.key()))
 
