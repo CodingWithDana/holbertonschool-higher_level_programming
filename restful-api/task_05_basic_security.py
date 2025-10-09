@@ -4,7 +4,7 @@ from flask import jsonify
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
 
-flask_app = Flask(__name__)
+app = Flask(__name__)
 auth = HTTPBasicAuth()
 
 users = {
@@ -43,7 +43,7 @@ def verify_password(username, password):
 def auth_error():
     return jsonify({"error": "Unauthorized access"}), 401
 
-@flask_app.route('/basic-protected', methods=['GET'])
+@app.route('/basic-protected', methods=['GET'])
 @auth.login_required
 def basic_protected():
     """Basic Auth protected endpoint.
@@ -54,7 +54,7 @@ def basic_protected():
     return "Basic Auth: Access Granted"
 
 if __name__ == '__main__':
-    flask_app.run(debug=True)
+    app.run(debug=True)
     
 
 # TODOLIST
