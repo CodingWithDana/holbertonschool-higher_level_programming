@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash
 
 flask_app = Flask(__name__)
 auth = HTTPBasicAuth()
