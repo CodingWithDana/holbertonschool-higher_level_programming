@@ -1,6 +1,7 @@
 from flask import Flask
-from flask_httpauth import HTTPBasicAuth
+from flask import request
 from flask import jsonify
+from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
 
