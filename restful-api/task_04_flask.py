@@ -38,9 +38,10 @@ def add_user():
     if not data or "username" not in data:
         return jsonify({"error": "Username is required"}), 400
 
+    username = data["username"]
     users[username] = data
-
     return jsonify({"message": "User added", "user": data}), 201
 
 if __name__ == "__main__":
+    # required for the Flask server to actually start
     app.run()
