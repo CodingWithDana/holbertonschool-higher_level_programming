@@ -11,7 +11,7 @@ users = {
 }
 
 # Protect this route
-@app.route('/secret')
+@flask_app.route('/secret')
 @auth.login_required
 def secret():
     return jsonify(message=f"Hello, {auth.current_user()}! This is a protected endpoint.")
