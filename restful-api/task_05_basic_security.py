@@ -44,7 +44,13 @@ def verify_password(username, password):
     else:
         # when username does not exist (authentication fails)
         return None
-    
+
+# Custom error handler for missing/invalid credentials
+@auth.error_handler
+def unauthorized():
+    # Return 401 response
+    return make_response("Unauthorized", 401)
+
 # Protect routes using Basic Auth
 @app.route('/basic-protected', methods=['GET'])
 
