@@ -50,9 +50,8 @@ def verify_password(username, password):
         if check_password_hash(hashed_password, password):
             # if provided password matched, return the username:
             return username
-    else:
-        # when username does not exist (authentication fails)
-        return None
+    # when username does not exist (authentication fails)
+    return None
 
 # Custom error handler for missing/invalid credentials
 @auth.error_handler
