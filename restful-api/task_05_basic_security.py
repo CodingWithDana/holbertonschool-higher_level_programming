@@ -41,17 +41,25 @@ users = {
 # Verify username and password for Basic Auth
 @auth.verify_password
 def verify_password(username, password):
-    # check if username exists in the users dictionary
-    if username in users:
-        return None
+    user = users.get(username)
+    if (
+        user and
+        check_password_hash(user['password'], password)
+    ):
+        return username
+    return None
 
-    # get the hashed password for this user
-    hashed_password = users[username]["password"]
-    # verify the user's provided password against the hashed password
-    if not check_password_hash(hashed_password, password):
-        return None
+    # # check if username exists in the users dictionary
+    # if username in users:
+    #     return None
 
-    return username
+    # # get the hashed password for this user
+    # hashed_password = users[username]["password"]
+    # # verify the user's provided password against the hashed password
+    # if not check_password_hash(hashed_password, password):
+    #     return None
+
+    # return username
 
 # Custom error handler for missing/invalid credentials
 @auth.error_handler
