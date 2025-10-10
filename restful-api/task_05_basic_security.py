@@ -13,7 +13,7 @@ from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import create_access_token
 from flask_jwt_extended import JWTManager
 
-# Initialize the Flask application
+# Initialise the Flask application
 app = Flask(__name__)
 
 # Create a Basic Authentication object
@@ -74,7 +74,6 @@ def basic_protected():
 # ================
 # JWT SETUP
 # ================
-
 # Secret key for signing JWTs (replace in production)
 app.config["JWT_SECRET_KEY"] = "SuPEr-SEcREt05"
 # Initialise JWT Manager
