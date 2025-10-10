@@ -50,9 +50,6 @@ def verify_password(username, password):
         if check_password_hash(hashed_password, password):
             # if provided password matched, return the username:
             return username
-        else:
-            # if provided password NOT matched/incorrect (authentication fails)
-            return None
     else:
         # when username does not exist (authentication fails)
         return None
