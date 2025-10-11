@@ -31,28 +31,28 @@ users = {
 }
 
 
-@auth.verify_password
-def verify_password(username, password):
-    #Verify user credentials for HTTP Basic Auth.
-    user = users.get(username)
-    if (
-        user and
-        check_password_hash(user['password'], password)
-    ):
-        return username
-    return None
+# @auth.verify_password
+# def verify_password(username, password):
+#     #Verify user credentials for HTTP Basic Auth.
+#     user = users.get(username)
+#     if (
+#         user and
+#         check_password_hash(user['password'], password)
+#     ):
+#         return username
+#     return None
 
 
-@auth.error_handler
-def auth_error():
-    return jsonify({"error": "Unauthorized access"}), 401
+# @auth.error_handler
+# def auth_error():
+#     return jsonify({"error": "Unauthorized access"}), 401
 
 
-@app.route('/basic-protected', methods=['GET'])
-@auth.login_required
-def basic_protected():
-    #Basic Auth protected endpoint.
-    return "Basic Auth: Access Granted"
+# @app.route('/basic-protected', methods=['GET'])
+# @auth.login_required
+# def basic_protected():
+#     #Basic Auth protected endpoint.
+#     return "Basic Auth: Access Granted"
 
 
 # @app.route('/login', methods=['POST'])
@@ -87,50 +87,50 @@ def admin_only():
     return "Admin Access: Granted"
 
 
-# @jwt.unauthorized_loader
-# def handle_unauthorized_error(err):
-#     # Handler for missing or unauthorized JWT token.
-#     return jsonify({"error": "Missing or invalid token"}), 401
+@jwt.unauthorized_loader
+def handle_unauthorized_error(err):
+    # Handler for missing or unauthorized JWT token.
+    return jsonify({"error": "Missing or invalid token"}), 401
 
 
-# @jwt.invalid_token_loader
-# def handle_invalid_token_error(err):
-#     """Handler for invalid JWT token.
+@jwt.invalid_token_loader
+def handle_invalid_token_error(err):
+    """Handler for invalid JWT token.
 
-#     Returns:
-#         JSON error message with 401 status.
-#     """
-#     return jsonify({"error": "Invalid token"}), 401
-
-
-# @jwt.expired_token_loader
-# def handle_expired_token_error(err):
-#     """Handler for expired JWT token.
-
-#     Returns:
-#         JSON error message with 401 status.
-#     """
-#     return jsonify({"error": "Token has expired"}), 401
+    Returns:
+        JSON error message with 401 status.
+    """
+    return jsonify({"error": "Invalid token"}), 401
 
 
-# @jwt.revoked_token_loader
-# def handle_revoked_token_error(err):
-#     """Handler for revoked JWT token.
+@jwt.expired_token_loader
+def handle_expired_token_error(err):
+    """Handler for expired JWT token.
 
-#     Returns:
-#         JSON error message with 401 status.
-#     """
-#     return jsonify({"error": "Token has been revoked"}), 401
+    Returns:
+        JSON error message with 401 status.
+    """
+    return jsonify({"error": "Token has expired"}), 401
 
 
-# @jwt.needs_fresh_token_loader
-# def handle_needs_fresh_token_error(err):
-#     """Handler for fresh JWT token required.
+@jwt.revoked_token_loader
+def handle_revoked_token_error(err):
+    """Handler for revoked JWT token.
 
-#     Returns:
-#         JSON error message with 401 status.
-#     """
-#     return jsonify({"error": "Fresh token required"}), 401
+    Returns:
+        JSON error message with 401 status.
+    """
+    return jsonify({"error": "Token has been revoked"}), 401
+
+
+@jwt.needs_fresh_token_loader
+def handle_needs_fresh_token_error(err):
+    """Handler for fresh JWT token required.
+
+    Returns:
+        JSON error message with 401 status.
+    """
+    return jsonify({"error": "Fresh token required"}), 401
 
 
 if __name__ == "__main__":
