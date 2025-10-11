@@ -70,21 +70,21 @@ def login():
     return jsonify(access_token=access_token)
 
 
-@app.route('/jwt-protected', methods=['GET'])
-@jwt_required()
-def jwt_protected():
-    # JWT protected endpoint.
-    return "JWT Auth: Access Granted"
-
-
-# @app.route('/admin-only', methods=['GET'])
+# @app.route('/jwt-protected', methods=['GET'])
 # @jwt_required()
-# def admin_only():
-#     # Admin-only endpoint.
-#     identity = get_jwt_identity()
-#     if identity["role"] != "admin":
-#         return jsonify({"error": "Admin access required"}), 403
-#     return "Admin Access: Granted"
+# def jwt_protected():
+#     # JWT protected endpoint.
+#     return "JWT Auth: Access Granted"
+
+
+@app.route('/admin-only', methods=['GET'])
+@jwt_required()
+def admin_only():
+    # Admin-only endpoint.
+    identity = get_jwt_identity()
+    if identity["role"] != "admin":
+        return jsonify({"error": "Admin access required"}), 403
+    return "Admin Access: Granted"
 
 
 @jwt.unauthorized_loader
