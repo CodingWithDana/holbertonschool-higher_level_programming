@@ -39,38 +39,38 @@ users = {
 }
 
 
-# # Dana's Initial Way: works but not well readable
-# Verify username and password for Basic Auth
-@auth.verify_password
-def verify_password(username, password):
-    # check if username exists in the users dictionary
-    if username in users:
-        # get the hashed password for this user
-        hashed_password = users[username]["password"]
-        
-        # verify the user's provided password against the hashed password
-        if check_password_hash(hashed_password, password):
-            # if provided password matched, return the username:
-            return username
-        else:
-            # if provided password NOT matched/incorrect (authentication fails)
-            return None
-    else:
-        # when username does not exist (authentication fails)
-        return None
-    
-# # MORE READABLE WAY
-# Verify username and password for Basic Auth
+# # # Dana's Initial Way: works but not well readable
+# # Verify username and password for Basic Auth
 # @auth.verify_password
 # def verify_password(username, password):
-#     #Verify user credentials for HTTP Basic Auth.
-#     user = users.get(username)
-#     if (
-#         user and
-#         check_password_hash(user['password'], password)
-#     ):
-#         return username
-#     return None
+#     # check if username exists in the users dictionary
+#     if username in users:
+#         # get the hashed password for this user
+#         hashed_password = users[username]["password"]
+        
+#         # verify the user's provided password against the hashed password
+#         if check_password_hash(hashed_password, password):
+#             # if provided password matched, return the username:
+#             return username
+#         else:
+#             # if provided password NOT matched/incorrect (authentication fails)
+#             return None
+#     else:
+#         # when username does not exist (authentication fails)
+#         return None
+    
+# MORE READABLE WAY
+Verify username and password for Basic Auth
+@auth.verify_password
+def verify_password(username, password):
+    #Verify user credentials for HTTP Basic Auth.
+    user = users.get(username)
+    if (
+        user and
+        check_password_hash(user['password'], password)
+    ):
+        return username
+    return None
 
 
 # Custom error handler for missing/invalid credentials
