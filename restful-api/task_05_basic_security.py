@@ -19,10 +19,10 @@ app = Flask(__name__)
 # Create a Basic Authentication object
 auth = HTTPBasicAuth()
 
-# # Secret key for signing JWTs (replace in production)
-# app.config["JWT_SECRET_KEY"] = "SuPEr-SEcREt05"
-# # Initialise JWT Manager
-# jwt = JWTManager(app)
+# Secret key for signing JWTs (replace in production)
+app.config["JWT_SECRET_KEY"] = "SuPEr-SEcREt05"
+# Initialise JWT Manager
+jwt = JWTManager(app)
 
 # A dict of Users and their hashed passwords (User Data: in-memory)
 users = {
@@ -66,13 +66,6 @@ def auth_error():
 def basic_protected():
     #Basic Auth protected endpoint.
     return "Basic Auth: Access Granted"
-
-
-# Secret key for signing JWTs (replace in production)
-app.config["JWT_SECRET_KEY"] = "SuPEr-SEcREt05"
-# Initialise JWT Manager
-jwt = JWTManager(app)
-Login route to generate JWT tokens
 
 @app.route('/login', methods=['POST'])
 def login():
