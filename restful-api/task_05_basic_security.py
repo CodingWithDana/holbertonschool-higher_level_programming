@@ -67,6 +67,25 @@ def basic_protected():
     #Basic Auth protected endpoint.
     return "Basic Auth: Access Granted"
 
+# @app.route('/login', methods=['POST'])
+# def login():
+#     # Get JSON data from request body
+#     username = request.json.get("username")
+#     password = request.json.get("password")
+#     user = users.get(username)
+    
+#     # Verify username and password
+#     if username not in users or not (
+#         check_password_hash(user["password"], password)
+#     ):
+#         return jsonify({"error": "Invalid credentials"}), 401
+#     # create a JWT token with username and role as identity
+#     access_token = create_access_token(identity={'username': username,
+#                                                  'role': user['role']})
+#     # return the JWT token as JSON
+#     return jsonify(access_token=access_token)
+
+# Login route to generate JWT tokens
 @app.route('/login', methods=['POST'])
 def login():
     # Get JSON data from request body
@@ -75,17 +94,27 @@ def login():
     user = users.get(username)
     
     # Verify username and password
-    if username not in users or not (
-        check_password_hash(user["password"], password)
-    ):
+    if username in users:
+        # if username exists, then retrieve the hashed password for the given username
+        hashed_password = users[username]["password"]
+        
+        # compare the provided password with the hashed password
+        if check_password_hash(hashed_password, password):
+            # if password is correct, retrieve the user's role
+            user_role = users[username]["role"]
+            
+            # create a JWT token with username and role as identity
+            access_token = create_access_token(identity={"username": username, "role": user_role})
+            
+            # return the JWT token as JSON
+            return jsonify(access_token=access_token)
+        else:
+            # if password is incorrect
+            return jsonify({"error": "Invalid credentials"}), 401
+    else:
+        # if username does not exist
         return jsonify({"error": "Invalid credentials"}), 401
-    # create a JWT token with username and role as identity
-    access_token = create_access_token(identity={'username': username,
-                                                 'role': user['role']})
-    # return the JWT token as JSON
-    return jsonify(access_token=access_token)
-
-
+    
 # JWT Protected Route
 @app.route('/jwt-protected', methods=['GET'])
 # Only accessible with a valid JWT token
