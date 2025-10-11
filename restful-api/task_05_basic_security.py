@@ -55,19 +55,19 @@ def basic_protected():
     return "Basic Auth: Access Granted"
 
 
-@app.route('/login', methods=['POST'])
-def login():
-    # Authenticate user and provide JWT access token.
-    username = request.json.get("username")
-    password = request.json.get("password")
-    user = users.get(username)
-    if username not in users or not (
-        check_password_hash(user["password"], password)
-    ):
-        return jsonify({"error": "Invalid credentials"}), 401
-    access_token = create_access_token(identity={'username': username,
-                                                 'role': user['role']})
-    return jsonify(access_token=access_token)
+# @app.route('/login', methods=['POST'])
+# def login():
+#     # Authenticate user and provide JWT access token.
+#     username = request.json.get("username")
+#     password = request.json.get("password")
+#     user = users.get(username)
+#     if username not in users or not (
+#         check_password_hash(user["password"], password)
+#     ):
+#         return jsonify({"error": "Invalid credentials"}), 401
+#     access_token = create_access_token(identity={'username': username,
+#                                                  'role': user['role']})
+#     return jsonify(access_token=access_token)
 
 
 # @app.route('/jwt-protected', methods=['GET'])
