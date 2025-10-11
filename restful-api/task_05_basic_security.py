@@ -77,14 +77,14 @@ def jwt_protected():
     return "JWT Auth: Access Granted"
 
 
-@app.route('/admin-only', methods=['GET'])
-@jwt_required()
-def admin_only():
-    # Admin-only endpoint.
-    identity = get_jwt_identity()
-    if identity["role"] != "admin":
-        return jsonify({"error": "Admin access required"}), 403
-    return "Admin Access: Granted"
+# @app.route('/admin-only', methods=['GET'])
+# @jwt_required()
+# def admin_only():
+#     # Admin-only endpoint.
+#     identity = get_jwt_identity()
+#     if identity["role"] != "admin":
+#         return jsonify({"error": "Admin access required"}), 403
+#     return "Admin Access: Granted"
 
 
 @jwt.unauthorized_loader
@@ -123,14 +123,14 @@ def handle_revoked_token_error(err):
     return jsonify({"error": "Token has been revoked"}), 401
 
 
-# @jwt.needs_fresh_token_loader
-# def handle_needs_fresh_token_error(err):
-#     """Handler for fresh JWT token required.
+@jwt.needs_fresh_token_loader
+def handle_needs_fresh_token_error(err):
+    """Handler for fresh JWT token required.
 
-#     Returns:
-#         JSON error message with 401 status.
-#     """
-#     return jsonify({"error": "Fresh token required"}), 401
+    Returns:
+        JSON error message with 401 status.
+    """
+    return jsonify({"error": "Fresh token required"}), 401
 
 
 if __name__ == "__main__":
