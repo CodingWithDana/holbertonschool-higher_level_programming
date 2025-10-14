@@ -11,6 +11,6 @@
     -- records are sorted by descending score
     -- database name will be passed in the command line (no action required in the code)
 
-SELECT (*) FROM second_table
+SELECT * FROM second_table
 WHERE name IS NOT NULL
 ORDER BY score DESC;
