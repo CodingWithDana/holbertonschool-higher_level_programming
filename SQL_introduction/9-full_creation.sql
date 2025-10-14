@@ -14,4 +14,4 @@ VALUES
     (3, 'Bob', 14),
     (4, 'George', 8);
 
-SELECT * from second_table;
+SELECT * FROM second_table;
