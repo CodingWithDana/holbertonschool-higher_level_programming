@@ -5,7 +5,7 @@
     -- each record should display: tv_genres.name
     -- results must be sorted in ascending order by the genre name
     -- can use only one SELECT statement
-SELECT tv_genres.name, tv_shows.title
+SELECT tv_genres.name
 FROM tv_genres
 LEFT JOIN tv_shows ON tv_shows.id = tv_genres.id
 WHERE tv_shows.id = 8
