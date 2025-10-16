@@ -7,5 +7,5 @@
     -- can use only one SELECT statement
 SELECT DISTINCT tv_genres.name AS name
 FROM tv_genres
-INNER JOIN tv_show_genres ON tv_show_genres.genre.id = tv_genres.id
+INNER JOIN tv_show_genres ON tv_show_genres.genre_id = tv_genres.id
 ORDER BY name ASC;
