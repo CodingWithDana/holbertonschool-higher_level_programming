@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 
--- grant all privileges to user user_0d_1
-GRANT ALL PRIVILEDGES ON *.* TO 'user_0d_1'@'localhost';
+-- grant all privileges to users user_0d_1 and user_0d_2
+SHOW GRANTS FOR 'user_0d_1'@'localhost';
+SHOW GRANTS FOR 'user_0d_2'@'localhost';
+
+
