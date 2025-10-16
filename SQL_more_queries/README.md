@@ -19,3 +19,9 @@
 - How to test:
     
     cat <file_name>.sql | mysql -hlocalhost -uroot -p <database_name>
+
+
+
+
+- Database dump (being used for Tasks 10 - 16), link to download below:
+https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql
