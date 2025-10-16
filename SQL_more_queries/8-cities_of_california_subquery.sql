@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
 -- look up specfied data
-USE hbtn_0d_usa;
-
 SELECT *
 FROM CITIES
 WHERE state_id = (
