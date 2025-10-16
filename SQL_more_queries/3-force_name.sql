@@ -6,5 +6,5 @@ CREATE TABLE IF NOT EXISTS force_name (
     name VARCHAR(256) NOT NULL
 );
 
-INSERT INTO force_name (id, name)
-VALUES (59, "DANA");
+-- INSERT INTO force_name (id, name)
+-- VALUES (59, "DANA");
