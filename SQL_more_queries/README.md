@@ -10,8 +10,12 @@
 
 ### Notes:
 - The database name will be passed as an argument of the mysql command:(mysql command starts with `mysql`)
+    
     mysql -hlocalhost -uroot -p <database_name>
 
 
+
+
 - How to test:
+    
     cat <file_name>.sql | mysql -hlocalhost -uroot -p <database_name>
