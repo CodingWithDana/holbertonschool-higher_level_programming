@@ -7,7 +7,7 @@ Lists all states from the database hbtn_0e_0_usa
 import MySQLdb
 import sys
 # write a script that lists all states from the database hbtn_0e_0_usa:
-# your script should take 3 arguments: 
+# your script should take 3 arguments:
 #         mysql username, mysql password and database name
 # use the module MySQLdb (import MySQLdb)
 # connect to a MySQL server running at port 3306
