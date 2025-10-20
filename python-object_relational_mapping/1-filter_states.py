@@ -25,7 +25,7 @@ if __name__ == "__main__":
         host="localhost",
         port=3306,
         user=username,
-        passw=password,
+        passwd=password,
         db=database
     )
 
