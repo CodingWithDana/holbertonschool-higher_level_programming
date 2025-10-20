@@ -14,7 +14,7 @@ import MySQLdb
 import sys
 
 
-if __main__ == "__name__":
+if __name__ == "__main__":
     # get command-line arguments
     username = sys.argv[1]
     password = sys.argv[2]
