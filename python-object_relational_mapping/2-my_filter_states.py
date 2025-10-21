@@ -30,6 +30,7 @@ if __name__ == "__main__":
         user=username,
         passwd=password,
         db=database
+        
     )
     
     # create a cursor to execute queries
@@ -37,9 +38,9 @@ if __name__ == "__main__":
     
     # execute SQL query to display all values where 
     # `name` matches the argument
-    cursor.execute(
-        " SELECT * FROM states WHERE name = %s", (state_name_searched,)
-    )
+    # using parameter substitution
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    cursor.execute(query, (state_name_searched,))
     
     # fetch and display all matching rows
     for row in cursor.fetchal():
