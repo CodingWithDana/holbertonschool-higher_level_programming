@@ -39,8 +39,9 @@ if __name__ == "__main__":
     # execute SQL query to display all values where
     # `name` matches the argument
     # using parameter substitution
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    cursor.execute(query, (state_name_searched,))
+    cursor.execute(
+        "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC",
+        (state_name_searched,))
 
     # fetch and display all matching rows
     for row in cursor.fetchall():
