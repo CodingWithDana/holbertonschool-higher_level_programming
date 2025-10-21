@@ -43,7 +43,7 @@ if __name__ == "__main__":
     cursor.execute(query, (state_name_searched,))
     
     # fetch and display all matching rows
-    for row in cursor.fetchal():
+    for row in cursor.fetchall():
         print(row)
         
     # close the connection
