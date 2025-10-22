@@ -32,10 +32,10 @@ if __name__ == "__main__":
 
     # execute SQL query to display all cities
     cursor.execute(
-        "SELECT cities.id, cities.name, states.name"
-        "FROM cities"
-        "JOIN states ON cities.state_id = states.id"
-        "ORDER BY cities.id ASC"
+        "SELECT cities.id, cities.name, states.name "
+        "FROM cities "
+        "JOIN states ON cities.state_id = states.id "
+        "ORDER BY cities.id ASC;"
     )
 
     # fetch and display all matching rows
