@@ -34,14 +34,17 @@ if __name__ == "__main__":
     # create a cursor to execute queries
     cursor = db.cursor()
 
-    # execute SQL query to  lists all cities of that state
-    cursor.execute("""
-        SELECT cities.name
-        FROM cities
-        JOIN states ON cities.state_id = states.id
-        WHERE states.name = %s
-        ORDER BY cities.id ASC;
-    """)
+    # execute query (note %s cannot be quoted)
+    query = (
+        "SELECT cities.name "
+        "FROM cities "
+        "JOIN states ON cities.state_id = states.id "
+        "WHERE states.name = %s "
+        "ORDER BY cities.id ASC;"
+    )
+
+    # execute with a tuple argument (state_name,)
+    cursor.execute(query, (state_name,))
 
     # fetch and display all matching rows
     for row in cursor.fetchall():
