@@ -46,9 +46,10 @@ if __name__ == "__main__":
     # execute with a tuple argument (state_name,)
     cursor.execute(query, (state_name,))
 
-    # fetch and display all matching rows
-    for row in cursor.fetchall():
-        print(row)
+    # fetchall() returns a list of tuples (cities)
+    rows = cursor.fetchall()
+    # combine all row tuples into a single string separated by ,
+    print(", ".join([row[0] for row in rows]))
 
     # close the connection
     cursor.close()
