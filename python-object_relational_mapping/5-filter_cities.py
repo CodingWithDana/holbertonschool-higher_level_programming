@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Take the name of a state as an argument and lists all cities 
+Take the name of a state as an argument and lists all cities
 of that state, using the database hbtn_0e_4_usa
 """
 # take 4 arguments: `mysql username`,`mysql password`, `database name`,
