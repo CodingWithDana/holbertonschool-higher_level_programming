@@ -4,7 +4,8 @@ List all State objects from the database hbtn_0e_6_usa
 """
 # take 3 arguments: `mysql username`,`mysql password`, `database name`,
 # use the module `SQLAlchemy`
-# must import State and Base from model_state - `from model_state import Base, State`
+# must import State and Base from model_state 
+# - `from model_state import Base, State`
 # script should connect to a MySQL server running on localhost at port 3306
 # results must be sorted in ascending order by states.id
 # your code should not be executed when imported
@@ -18,10 +19,11 @@ from model_state import Base, State
 if __name__ == "__main__":
     # create database engine connection
     engine = create_engine(
-        f'mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost:3306/{sys.argv[3]}',
+        f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}"
+        f"@localhost:3306/{sys.argv[3]}",
         pool_pre_ping=True
     )
-    
+
     # create a session
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -32,4 +34,3 @@ if __name__ == "__main__":
 
     # Close the session
     session.close()
-
