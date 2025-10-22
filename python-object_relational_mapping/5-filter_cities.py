@@ -35,12 +35,13 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # execute SQL query to  lists all cities of that state
-    cursor.execute(
-        "SELECT cities_name "
-        "FROM cities "
-        "JOIN states ON cities.state_id = states.id "
-        "WHERE states_name = %s ORDER BY cities.id ASC;"
-    )
+    cursor.execute("""
+        SELECT cities.name
+        FROM cities
+        JOIN states ON cities.state_id = states.id
+        WHERE states.name = %s
+        ORDER BY cities.id ASC;
+    """)
 
     # fetch and display all matching rows
     for row in cursor.fetchall():
