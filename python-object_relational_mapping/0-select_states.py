@@ -17,7 +17,7 @@ import sys
 
 # your code should not be executed when imported
 if __name__ == "__main__":
-    # Get command-line arguments
+    # Get MySQL credentials and database name from arguments
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
