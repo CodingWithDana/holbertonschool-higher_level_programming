@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-List all State objects that contain the letter a from the database hbtn_0e_6_usa
+List all State objects that contain the letter a 
+from the database hbtn_0e_6_usa
 """
 # take 3 arguments: `mysql username`,`mysql password`, `database name`,
 # use the module `SQLAlchemy`
@@ -20,27 +21,31 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    
+
     # create the SQLAlchemy engine
     engine = create_engine(
         f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}"
         f"@localhost:3306/{sys.argv[3]}",
-        pool_pre_ping=True       
+        pool_pre_ping=True
     )
-    
+
     # create a configured "Session" class
     Session = sessionmaker(bind=engine)
-    
+
     # create a Sesion instance
     session = Session()
-    
+
     # query all State objects sorted by states.id
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
-    
+    states = (
+        session.query(State)
+        .filter(State.name.like('%a%'))
+        .order_by(State.id)
+        .all()
+    )
+
     # print results
     for state in states:
         print(f"{state.id}: {state.name}")
-    
+
     # close session
     session.close()
-    
