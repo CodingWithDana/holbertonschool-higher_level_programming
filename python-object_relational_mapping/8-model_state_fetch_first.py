@@ -8,7 +8,8 @@ Print the first State object from the database hbtn_0e_6_usa
 # - `from model_state import Base, State`
 # script should connect to a MySQL server running on localhost at port 3306
 # the state you display must be the first in states.id
-# not allowed to fetch all states from the database before displaying the result
+# not allowed to fetch all states from the database 
+#    before displaying the result
 # if the table states is empty, print Nothing followed by a new line
 # your code should not be executed when imported
 
@@ -24,16 +25,16 @@ if __name__ == "__main__":
         f"@localhost:3306/{sys.argv[3]}",
         pool_pre_ping=True
     )
-    
+
     # create a configured "Session" class
     Session = sessionmaker(bind=engine)
-    
+
     # create a Sesion instance
     session = Session()
-    
+
     # get the first State object (ordered by id)
     first_state = session.query(State).order_by(State.id).first()
-    
+
     # display result
     # check: if first_state not empty
     if first_state is not None:
