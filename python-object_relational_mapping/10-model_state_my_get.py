@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Print the State object with the name passed as argument 
+Print the State object with the name passed as argument
 from the database hbtn_0e_6_usa
 """
 # take 3 arguments: `mysql username`,`mysql password`, `database name`,
@@ -21,8 +21,10 @@ from model_state import Base, State
 
 if __name__ == "__main__":
     if len(sys.argv) < 5:
-        print("Usage: {} <username> <password> <db_name> <state_name>"
-                .format(sys.argv[0]))
+        print("""
+            "Usage: {} <username> <password> <db_name> <state_name>"
+            .format(sys.argv[0]))
+        """)
         sys.exit(1)
 
     user = sys.argv[1]
