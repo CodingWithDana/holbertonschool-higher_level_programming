@@ -8,7 +8,7 @@ Print the first State object from the database hbtn_0e_6_usa
 # - `from model_state import Base, State`
 # script should connect to a MySQL server running on localhost at port 3306
 # the state you display must be the first in states.id
-# not allowed to fetch all states from the database 
+# not allowed to fetch all states from the database
 #    before displaying the result
 # if the table states is empty, print Nothing followed by a new line
 # your code should not be executed when imported
