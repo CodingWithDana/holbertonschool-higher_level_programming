@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-List all State objects that contain the letter a 
+List all State objects that contain the letter a
 from the database hbtn_0e_6_usa
 """
 # take 3 arguments: `mysql username`,`mysql password`, `database name`,
