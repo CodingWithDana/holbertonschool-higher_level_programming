@@ -18,8 +18,8 @@ from model_state import Base, State
 if __name__ == "__main__":
     # connect to the MySQL database
     engine = create_engine(
-        f"mysql+mysqldb://{argv[1]}:{argv[2]}"
-        f"@localhost:3306/{argv[3]}",
+        f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}"
+        f"@localhost:3306/{sys.argv[3]}",
         pool_pre_ping=True
     )
 
