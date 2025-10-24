@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
     # delete each one
     for state in states_with_a:
-        session.delete()
+        session.delete(state)
 
     session.commit()
     session.close()
