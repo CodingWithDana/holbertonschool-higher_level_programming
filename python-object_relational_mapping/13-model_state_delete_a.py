@@ -34,7 +34,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # find all states whose name has 'a' 
+    # find all states whose name has 'a'
     states_with_a = (
         session.query(State)
         .filter(State.name.ilike('%a%'))
