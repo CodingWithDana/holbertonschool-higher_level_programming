@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Delete all State objects with a name containing the letter a from the database hbtn_0e_6_usa
+Delete all State objects with a name containing the letter a
+from the database hbtn_0e_6_usa
 """
 # take 3 arguments: `mysql username`,`mysql password`, `database name`
 # use the module `SQLAlchemy`
