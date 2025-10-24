@@ -26,7 +26,6 @@ if __name__ == "__main__":
     user = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
-    state_name = sys.argv[4]
 
     # Connect to MySQL on localhost:3306
     engine = create_engine(
