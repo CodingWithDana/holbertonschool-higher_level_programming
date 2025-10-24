@@ -42,7 +42,7 @@ if __name__ == "__main__":
             .filter(State.id == 2)
             .first()
         )
-    
+
     # change its name to "New Mexico" if it exists
     if state is not None:
         state.name = "New Mexico"
