@@ -36,7 +36,7 @@ if __name__ == "__main__":
     # find all states whose name has 'a' 
     states_with_a = (
         session.query(State)
-        .filter(State.name.like('%a%'))
+        .filter(State.name.ilike('%a%'))
         .all()
         )
 
