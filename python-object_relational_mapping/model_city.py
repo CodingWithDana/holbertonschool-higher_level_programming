@@ -3,7 +3,9 @@
 
 
 from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy import ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
+
 from model_state import Base
 
 
