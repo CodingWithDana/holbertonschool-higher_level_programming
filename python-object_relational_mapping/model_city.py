@@ -2,15 +2,9 @@
 """ Definition of a City and an instance Base = declarative_base() """
 
 
-from sqlalchemy import Column, Integer, String, create_engine
-from sqlalchemy import ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
 from model_state import Base
-
-
-# Create the instance Base
-Base = declarative_base()
 
 
 class City(Base):
@@ -33,3 +27,4 @@ class City(Base):
         nullable=False,
         unique=True
     )
+    state = relationship("State")
