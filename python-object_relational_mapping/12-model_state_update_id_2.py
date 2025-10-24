@@ -17,7 +17,7 @@ from model_state import Base, State
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 5:
+    if len(sys.argv) < 4:
         print(
             "Usage: {} <username> <password> <db_name>".format(sys.argv[0])
         )
