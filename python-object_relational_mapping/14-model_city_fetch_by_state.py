@@ -8,7 +8,8 @@ Print all City objects from the database hbtn_0e_14_usa
 # - `from model_state import Base, State`
 # script should connect to a MySQL server running on localhost at port 3306
 # results must be sorted in ascending order by cities.id
-# results must be display as they are in the example below (<state name>: (<city id>) <city name>)
+# results must be display as they are in the
+# example below (<state name>: (<city id>) <city name>)
 # your code should not be executed when imported
 
 import sys
