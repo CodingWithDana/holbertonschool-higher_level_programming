@@ -1,5 +1,5 @@
 ### SPRINT 2
-## Topic covered:
+## 📚 Topic covered:
 - Python: 
     - conditional statements
     - functions
