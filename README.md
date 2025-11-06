@@ -1,5 +1,5 @@
 ### SPRINT 2
-## Topic covered:
+## 📚 Topic covered:
 - Python: 
     - conditional statements
     - functions
@@ -17,3 +17,6 @@
 
 
 - Group Project: build the HBnB Application
+
+
+- JavaScript 
