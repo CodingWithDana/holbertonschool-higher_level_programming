@@ -4,7 +4,6 @@
 //  never both in the same time and never empty. If the current
 //  class is red, when the user click on id toggle_header element,
 //  the class must be updated to green ; and the reverse.
-
 const triggerElement = document.querySelector('#toggle_header');
 const headerColor = document.querySelector('header');
 
