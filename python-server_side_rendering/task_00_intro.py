@@ -24,7 +24,7 @@ def generate_invitations(template, attendees):
         output = output.replace('{name}', str(value.get('name') or 'N/A'))
         output = output.replace('{event_title}', str(value.get('event_title') or 'N/A'))
         output = output.replace('{event_date}', str(value.get('event_date') or 'N/A'))
-        output = output.replace('{location}', str(value.get('location') or 'N/A'))
+        output = output.replace('{event_location}', str(value.get('event_location') or 'N/A'))
         
         filename = f'output_{i}.txt'
         
