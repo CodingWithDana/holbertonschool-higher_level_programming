@@ -16,7 +16,8 @@ def generate_invitations(template, attendees):
     
     for i, value in enumerate(attendees, 1):
         if not isinstance(value, dict):
-            logging.error(f'{i}: N/A.')
+            # logging.error(f'{i}: N/A.')
+            logging.error(f'N/A')
             continue
         
         output = template
