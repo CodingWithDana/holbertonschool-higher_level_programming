@@ -9,8 +9,8 @@
 ### How to test the program 
 #### For Task 0: How to create personalized invitation cards from a template
     - In the terminal, run
-        - `cd python-server_side_rendering`
-        - `python3 00-main.py`
+        - cd python-server_side_rendering
+        - python3 00-main.py
 
     - Then check the folder `python-server_side_rendering`, you should see files (each file for each guest)
         output_1.txt
@@ -18,7 +18,7 @@
         output_3.txt
 
 #### For Task 1: How to render a web page using Jinja template and Flask
-    - To start the Flask server, run **python3 task_01_jinja.py**
+    - To start the Flask server, run `python3 task_01_jinja.py`
 
     - You will seel something like this:
         * Running on http://127.0.0.1:5000
@@ -33,21 +33,28 @@
 
         - http://127.0.0.1:5000/contact
         your Contact page
+        
     - If all pages render properly as per the requirements, your program works!
 
 #### For Task 2: How to read data (a list) from a JSON file and display them dynamically on a web page
     - To start the Flask server, run `python3 task_02_logic.py`
+    
     - Click the server link to view in browser
+    
     - If all pages render properly: return HTTP 200 responses and as per the requirements , your program works!
 
 #### For Task 3: How to display data from JSON or CSV Files in Flask application
     - To start the Flask server, run `python3 task_03_files.py`
+    
     - Click the server link to view in browser
+    
     - If all pages render properly: return HTTP 200 responses and as per the requirements , your program works!
 
 #### For Task 4: How to display data from SQLite database in Flask application
     - To start the Flask server, run `python3 task_04_db.py`
+    
     - Click the server link to view in browser
+    
     - If all pages render properly: return HTTP 200 responses and as per the requirements , your program works!
 
 ### Resources
