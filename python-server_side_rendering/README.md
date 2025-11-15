@@ -6,6 +6,17 @@
 - Through this project, you will learn how to implement SSR using Python and Flask, leveraging the Jinja templating engine to create dynamic, efficient, and SEO-friendly web applications.
 
 ---
+### How to test the program 
+#### For Task 0:
+    - In the terminal
+        - cd python-server_side_rendering
+        - python3 00-main.py
+    - Then check the folder `python-server_side_rendering`, you should see files (each file for each guest)
+        output_1.txt
+
+        output_2.txt
+        
+        output_3.txt
 
 ### Resources
 - MDN Web Docs on Server-Side Web Development: [MDN Server-Side Web Development](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side)
