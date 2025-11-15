@@ -6,6 +6,7 @@
 - Through this project, you will learn how to implement SSR using Python and Flask, leveraging the Jinja templating engine to create dynamic, efficient, and SEO-friendly web applications.
 
 ---
+
 ### How to test the program 
 #### For Task 0: How to create personalized invitation cards from a template
     - In the terminal, run
@@ -56,6 +57,8 @@
     - Click the server link to view in browser
     
     - If all pages render properly: return HTTP 200 responses and as per the requirements , your program works!
+
+---
 
 ### Resources
 - MDN Web Docs on Server-Side Web Development: [MDN Server-Side Web Development](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side)
