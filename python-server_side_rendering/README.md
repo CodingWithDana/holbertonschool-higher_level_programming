@@ -8,19 +8,22 @@
 ---
 ### How to test the program 
 #### For Task 0: How to create personalized invitation cards from a template
-    - In the terminal
-        - cd python-server_side_rendering
-        - python3 00-main.py
+    - In the terminal, run
+        - `cd python-server_side_rendering`
+        - `python3 00-main.py`
+
     - Then check the folder `python-server_side_rendering`, you should see files (each file for each guest)
         output_1.txt
         output_2.txt
         output_3.txt
 
-### For Task 1: How to render a web page using Jinja template and Flask
-    - To start the Flask server, run `python3 task_01_jinja.py`
+#### For Task 1: How to render a web page using Jinja template and Flask
+    - To start the Flask server, run **python3 task_01_jinja.py**
+
     - You will seel something like this:
         * Running on http://127.0.0.1:5000
         * Debug mode: on
+
     - Click the server link to view in browser
         - http://127.0.0.1:5000
         your Home page (index.html)
