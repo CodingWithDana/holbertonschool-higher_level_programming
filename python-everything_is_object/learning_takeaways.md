@@ -15,16 +15,20 @@ Every object in Python has:
 - an **identity** (its unique memory address)
 
 Example:
-`a = [1, 2, 3]
+`
+a = [1, 2, 3]
 
 print(type(a))   # print type of the object
 
-print(id(a))     # print the memory address of the object`
+print(id(a))     # print the memory address of the object
+`
 
 Output:
-`<class 'list'>
+`
+<class 'list'>
 
-139926795932424`
+139926795932424
+`
 
 Python created a new list object when you used **+**. The old one still exists until garbage-collected.
 
