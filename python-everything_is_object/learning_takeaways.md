@@ -14,7 +14,7 @@ Every object in Python has:
 - a **value** (what it holds)
 - an **identity** (its unique memory address)
 
-Example:
+_Example:_
 ```
 a = [1, 2, 3]
 
@@ -23,7 +23,7 @@ print(type(a))   # print type of the object
 print(id(a))     # print the memory address of the object
 ```
 
-Output:
+_Output:_
 ```
 <class 'list'>
 
@@ -34,7 +34,7 @@ Python created a new list object when you used **+**. The old one still exists u
 
 If we later reassign **a**:
 
-Example:
+_Example:_
 ```
 a = [1, 2, 3]
 
@@ -43,7 +43,7 @@ a = a + [4]
 print(id(a))
 ```
 
-Output:
+_Output:_
 ```
 139762597923567
 ```
@@ -51,9 +51,9 @@ Output:
 ### Mutable Objects
 Mutable objects are those that can be changed, meaning we can modify their contents without creating a new object.
 
-Common mutable types: `list`, `dict`, `set`, and `user-defined` objects.
+Common mutable types: `list`, `dict`, `set`, and user-defined objects.
 
-Example:
+_Example:_
 ```
 my_list = [1, 2, 3]
 
@@ -75,7 +75,7 @@ If we “modify” them, Python silently creates a new object instead.
 
 Common immutable types: `int`, `float`, `str`, `tuple`, `bool`.
 
-Example:
+_Example:_
 ```
 a = "Best"
 
@@ -93,7 +93,7 @@ Even though we used `+=`, Python created a brand new string and made apoint to i
 ### Why It Matters: Python Treats Them Differently
 Because Python objects behave differently depending on mutability, understanding this helps avoid subtle bugs.
 
-Example 1: with immutable objects (str)
+_Example 1: with **immutable** objects (`str`)_
 ```
 s1 = "Best School"
 
@@ -104,7 +104,7 @@ print(s1 == s2)  # True  (same value)
 print(s1 is s2)  # Might be False (different memory address)
 ```
 
-Example 2: with mutable objects (list)
+_Example 2: with **mutable** objects (`list`)_
 ```
 a = [1, 2, 3]
 
@@ -130,7 +130,7 @@ Python passes object references not the copies into functions.
 
 That means the behavior depends on whether the object is mutable or immutable.
 
-Example: with an immutable object (int):
+_Example: with an **immutable** object (`int`)_
 ```
 def increment(n):
 
@@ -154,7 +154,7 @@ Outside: 1
 
 **a** stays the same, because integers are immutable, so **n += 1** created a new object inside the function.
 
-Example: with a mutable object (list)
+_Example: with a **mutable** object (`list`)_
 ```
 def append_value(my_list):
 
@@ -167,7 +167,7 @@ append_value(nums)
 print(nums)
 ```
 
-Output:
+_Output:_
 ```
 [1, 2, 3, 100]
 ```
@@ -177,4 +177,6 @@ The function changed the original list because both **nums** and **my_list** ref
 ### Final Thoughts
 Understanding these concepts is one of the biggest “light-bulb moments” in becoming fluent in Python.
 
-Press enter or click to view image in full size
+
+<img width="1456" height="816" alt="image" src="https://github.com/user-attachments/assets/b072e900-54f7-419b-85b1-63846f3d6165" />
+
