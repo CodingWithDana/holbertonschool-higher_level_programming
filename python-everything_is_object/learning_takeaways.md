@@ -185,7 +185,3 @@ _Output:_
 ```
 
 The function changed the original list because both **nums** and **my_list** refer to the same object in memory.
-
----
-### Final Thoughts
-Understanding these concepts is one of the biggest “light-bulb moments” in becoming fluent in Python.
