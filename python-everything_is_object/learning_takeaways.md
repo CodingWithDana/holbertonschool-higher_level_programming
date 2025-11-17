@@ -1,5 +1,7 @@
 ## Python: Everything is Object
 
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/b072e900-54f7-419b-85b1-63846f3d6165" />
+
 ---
 
 ### Introduction
@@ -187,7 +189,3 @@ The function changed the original list because both **nums** and **my_list** ref
 ---
 ### Final Thoughts
 Understanding these concepts is one of the biggest “light-bulb moments” in becoming fluent in Python.
-
-
-<img width="1100" height="600" alt="image" src="https://github.com/user-attachments/assets/b072e900-54f7-419b-85b1-63846f3d6165" />
-
