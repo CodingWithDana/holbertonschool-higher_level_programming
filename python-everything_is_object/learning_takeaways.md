@@ -184,4 +184,4 @@ _Output:_
 [1, 2, 3, 100]
 ```
 
-The function changed the original list because both **nums** and **my_list** refer to the same object in memory.
+The function changed the original list because lists are mutable, so both **nums** and **my_list** refer to the same object in memory.
