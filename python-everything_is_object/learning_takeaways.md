@@ -5,7 +5,7 @@ When we write code in Python, we often talk about “variables” and “values�
 
 Understanding how Python stores and handles these objects, especially the difference between mutable and immutable types, is essential to writing bug-free code.
 
-### id() and type()**
+### id() and type()
 How Python sees our object
 
 Every object in Python has:
