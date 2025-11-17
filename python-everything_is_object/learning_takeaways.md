@@ -1,10 +1,12 @@
 ## Python: Everything is Object
 
+---
+
 ### Introduction
 When we write code in Python, we often talk about “variables” and “values”; however, under the hood, what we’re really working with are objects in memory. Every number, string, list, or even function that we create is an object.
 
 Understanding how Python stores and handles these objects, especially the difference between mutable and immutable types, is essential to writing bug-free code.
-
+---
 ### id() and type()
 How Python sees our object
 
@@ -47,7 +49,7 @@ _Output:_
 ```
 139762597923567
 ```
-
+---
 ### Mutable Objects
 Mutable objects are those that can be changed, meaning we can modify their contents without creating a new object.
 
@@ -67,7 +69,7 @@ print(id(my_list))     # 140231472 (same!)
 ```
 
 The same memory address proves that the list itself was modified and no new list created.
-
+---
 ### Immutable Objects
 Immutable objects cannot change once created.
 
@@ -89,7 +91,7 @@ print(id(a))        # 4319319728 (different!)
 ```
 
 Even though we used `+=`, Python created a brand new string and made apoint to it.
-
+---
 ### Why It Matters: Python Treats Them Differently
 Because Python objects behave differently depending on mutability, understanding this helps avoid subtle bugs.
 
@@ -124,7 +126,7 @@ print(a is b)     # False (same list object so same memory address)
 Both **a** and **b** refer to the same list object (so same memory address), so changing one changes both.
 
 This doesn’t happen with immutable types because we can’t modify them in place.
-
+---
 ### How Arguments Are Passed to Functions
 Python passes object references not the copies into functions.
 
@@ -173,10 +175,10 @@ _Output:_
 ```
 
 The function changed the original list because both **nums** and **my_list** refer to the same object in memory.
-
+---
 ### Final Thoughts
 Understanding these concepts is one of the biggest “light-bulb moments” in becoming fluent in Python.
 
 
-<img width="1456" height="816" alt="image" src="https://github.com/user-attachments/assets/b072e900-54f7-419b-85b1-63846f3d6165" />
+<img width="1100" height="600" alt="image" src="https://github.com/user-attachments/assets/b072e900-54f7-419b-85b1-63846f3d6165" />
 
