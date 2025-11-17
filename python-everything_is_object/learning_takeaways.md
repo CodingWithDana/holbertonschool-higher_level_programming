@@ -3,7 +3,10 @@
 ---
 
 ### Introduction
-When we write code in Python, we often talk about “variables” and “values”; however, under the hood, what we’re really working with are objects in memory. Every number, string, list, or even function that we create is an object.
+When we write code in Python, we often talk about “variables” and “values”; however, under the hood, what we’re really working with are objects in memory. 
+
+Every number, string, list, or even function that we create is an object.
+
 Understanding how Python stores and handles these objects, especially the difference between mutable and immutable types, is essential to writing bug-free code.
 
 ---
@@ -32,8 +35,6 @@ _Output:_
 139926795932424
 ```
 
-Python created a new list object when you used **+**. The old one still exists until garbage-collected.
-
 If we later reassign **a**:
 
 _Example:_
@@ -49,6 +50,7 @@ _Output:_
 ```
 139762597923567
 ```
+Python created a new list object (so new memory address) when you used **+**. The old one still exists until garbage-collected.
 
 ---
 ### Mutable Objects
@@ -92,7 +94,7 @@ print(a)            # 'Best School'
 print(id(a))        # 4319319728 (different!)
 ```
 
-Even though we used `+=`, Python created a brand new string and made apoint to it.
+Even though we used **+=**, Python created a brand new string and made **a** point to it.
 
 ---
 ### Why It Matters: Python Treats Them Differently
@@ -123,7 +125,7 @@ print(b)          # [1, 2, 3, 4] (b changed too!)
 
 print(a == b)     # True (same value)
 
-print(a is b)     # False (same list object so same memory address)
+print(a is b)     # True (same list object so same memory address)
 ```
 
 Both **a** and **b** refer to the same list object (so same memory address), so changing one changes both.
@@ -132,7 +134,7 @@ This doesn’t happen with immutable types because we can’t modify them in pla
 
 ---
 ### How Arguments Are Passed to Functions
-Python passes object references not the copies into functions.
+Python passes **object references not the copies** into functions.
 
 That means the behavior depends on whether the object is mutable or immutable.
 
@@ -143,6 +145,7 @@ def increment(n):
     n += 1
     
     print("Inside:", n)
+
 
 a = 1
 
@@ -165,6 +168,7 @@ _Example: with a **mutable** object (`list`)_
 def append_value(my_list):
 
     my_list.append(100)
+
 
 nums = [1, 2, 3]
 
