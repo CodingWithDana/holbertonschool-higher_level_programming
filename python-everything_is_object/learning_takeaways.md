@@ -1,6 +1,6 @@
 ## Python: Everything is Object
 
-<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/b072e900-54f7-419b-85b1-63846f3d6165" />
+<img width="1000" height="400" alt="image" src="https://github.com/user-attachments/assets/b072e900-54f7-419b-85b1-63846f3d6165" />
 
 ---
 
