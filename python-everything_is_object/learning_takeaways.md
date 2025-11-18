@@ -143,16 +143,12 @@ That means the behavior depends on whether the object is mutable or immutable.
 _Example: with an **immutable** object (`int`)_
 ```
 def increment(n):
-
     n += 1
-    
     print("Inside:", n)
 
 
 a = 1
-
 increment(a)
-
 print("Outside:", a)
 ```
 
@@ -168,19 +164,18 @@ Outside: 1
 _Example: with a **mutable** object (`list`)_
 ```
 def append_value(my_list):
-
     my_list.append(100)
+    print(my_list)
 
 
 nums = [1, 2, 3]
-
 append_value(nums)
-
 print(nums)
 ```
 
 _Output:_
 ```
+[1, 2, 3, 100]
 [1, 2, 3, 100]
 ```
 
