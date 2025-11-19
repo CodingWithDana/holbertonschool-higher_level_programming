@@ -19,7 +19,7 @@ Every object in Python has:
 
 - a **type** (what it is), shown with `type()`
 - a **value** (what it holds)
-- an **identity** (its unique memory address), shownwith `id()`
+- an **identity** (its unique memory address), shown with `id()`
 
 _Example:_
 ```
@@ -100,7 +100,7 @@ Even though we used **+=**, Python created a brand new string and made **a** poi
 
 ---
 ### How Immutable Objects are stored in memory
-Python stores the value of immutable objects directly, and creates a new object (means new memory address) whenever the value has changed
+Python stores the value of immutable objects directly, and creates a new object (that has a new memory address) whenever the value has changed.
 
 _Memory Schema Example 1:_
 ```
@@ -153,12 +153,6 @@ b = a
 ```
 
 Both a and b are now referencing to the same list object in memory. If one changes, the other one will also change.
-
----
-
-
-
-
 
 ---
 ### Why It Matters: Python Treats Them Differently
@@ -256,7 +250,7 @@ print(a is b) # True
 ```
 Both a and b point to the same preallocated integer object.
 
-**Two internal constants `NSMALLPOSINTS` & `NSMALLNEGINTS`**:
+**What are the 2 internal constants `NSMALLPOSINTS` & `NSMALLNEGINTS`**:
 - `NSMALLPOSINTS` => 257 (covers 0 to 256)
 - `NSMALLNEGINTS` => 5 (covers -1 to -5)
 
